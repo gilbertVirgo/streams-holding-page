@@ -1,0 +1,24 @@
+@import url("//db.onlinewebfonts.com/c/e956a479fdb7957b5e54aa49291bbc94?family=Zapf+Humanist+601");
+@import url("//fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffef2;
+}
+
+.image {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url("https://streams-media.s3.eu-west-2.amazonaws.com/holding-page-mobile.svg");
+}
+@media screen and (min-width: 800px) {
+  .image {
+    background-image: url("https://streams-media.s3.eu-west-2.amazonaws.com/holding-page-desktop.svg");
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
