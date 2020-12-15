@@ -1,21 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@mixin large() {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	background-color: #fffef2;
 }
 
-.image {
-	width: 100%;
-	max-width: 1440px;
-	min-height: 100vh;
-	margin: 0 auto;
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
 
-	background-size: 100% auto;
-	background-repeat: no-repeat;
+	@include large {
+		grid-template-columns: 1fr 1fr;
 
-	background-image: url("https://streams-media.s3.eu-west-2.amazonaws.com/holding-page-mobile.svg");
+		max-width: 1400px;
+		margin: 0 auto;
 
-	@media screen and (min-width: 800px) {
-		background-image: url("https://streams-media.s3.eu-west-2.amazonaws.com/holding-page-desktop.svg");
+		figure {
+			display: block !important;
+		}
+	}
+
+	article {
+		min-height: 100vh;
+
+		text-align: center;
+		color: #252525;
+
+		@include large {
+			min-height: unset !important;
+		}
+
+		[role="title"] {
+			font-weight: 300 !important;
+			font-family: ZapfHumnstBTWXX-Roman, Optima;
+			height: calc(100% - 56px - 53px);
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+
+			h1,
+			h4 {
+				font-weight: 300;
+			}
+
+			h1 {
+				font-size: 88px;
+				line-height: 23px;
+
+				@include large {
+					font-size: 150px;
+					line-height: 37px;
+				}
+
+				margin: 50px 0 85px;
+			}
+
+			h4 {
+				font-size: 54px;
+				line-height: 67px;
+
+				@include large {
+					font-size: 54px;
+					line-height: 67px;
+				}
+
+				margin: 0;
+			}
+		}
+
+		[role="tag"] {
+			height: 56px;
+		}
+
+		p {
+			font-family: "Roboto", sans-serif;
+			font-size: 24px;
+			line-height: 28px;
+			margin: 0 0 53px;
+		}
+	}
+
+	figure {
+		display: none;
+		position: relative;
+		margin: 0;
+		background-image: url("https://streams-media.s3.eu-west-2.amazonaws.com/Splitscreen+graphic.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding-bottom: 135%;
+		border: 30px solid #fffef2;
+
+		figcaption {
+			font-family: ZapfHumnstBTWXX-Roman, Optima;
+			font-weight: 500;
+			font-size: 40px;
+			line-height: 50px;
+			text-align: center;
+			color: #fffef2;
+
+			position: absolute;
+			bottom: 30px;
+			left: 0;
+			width: 100%;
+		}
 	}
 }

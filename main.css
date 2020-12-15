@@ -1,24 +1,98 @@
-@import url("//db.onlinewebfonts.com/c/e956a479fdb7957b5e54aa49291bbc94?family=Zapf+Humanist+601");
-@import url("//fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
   margin: 0;
   padding: 0;
   background-color: #fffef2;
 }
 
-.image {
-  width: 100%;
-  max-width: 1440px;
-  min-height: 100vh;
-  margin: 0 auto;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-image: url("https://streams-media.s3.eu-west-2.amazonaws.com/holding-page-mobile.svg");
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
 }
-@media screen and (min-width: 800px) {
-  .image {
-    background-image: url("https://streams-media.s3.eu-west-2.amazonaws.com/holding-page-desktop.svg");
+@media screen and (min-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
   }
+  .grid figure {
+    display: block !important;
+  }
+}
+.grid article {
+  min-height: 100vh;
+  text-align: center;
+  color: #252525;
+}
+@media screen and (min-width: 1200px) {
+  .grid article {
+    min-height: unset !important;
+  }
+}
+.grid article [role=title] {
+  font-weight: 300 !important;
+  font-family: ZapfHumnstBTWXX-Roman, Optima;
+  height: calc(100% - 56px - 53px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.grid article [role=title] h1,
+.grid article [role=title] h4 {
+  font-weight: 300;
+}
+.grid article [role=title] h1 {
+  font-size: 88px;
+  line-height: 23px;
+  margin: 50px 0 85px;
+}
+@media screen and (min-width: 1200px) {
+  .grid article [role=title] h1 {
+    font-size: 150px;
+    line-height: 37px;
+  }
+}
+.grid article [role=title] h4 {
+  font-size: 54px;
+  line-height: 67px;
+  margin: 0;
+}
+@media screen and (min-width: 1200px) {
+  .grid article [role=title] h4 {
+    font-size: 54px;
+    line-height: 67px;
+  }
+}
+.grid article [role=tag] {
+  height: 56px;
+}
+.grid article p {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 0 53px;
+}
+.grid figure {
+  display: none;
+  position: relative;
+  margin: 0;
+  background-image: url("https://streams-media.s3.eu-west-2.amazonaws.com/Splitscreen+graphic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 135%;
+  border: 30px solid #fffef2;
+}
+.grid figure figcaption {
+  font-family: ZapfHumnstBTWXX-Roman, Optima;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  color: #fffef2;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
