@@ -45,16 +45,10 @@ body {
   }
 }
 .grid article {
-  min-height: 100vh;
   text-align: center;
   color: #252525;
   display: flex;
   flex-direction: column;
-}
-@media screen and (min-width: 1200px) {
-  .grid article {
-    min-height: unset !important;
-  }
 }
 .grid article [role=title] {
   position: relative;
